@@ -1,6 +1,7 @@
-function loadPage() {
-  document.getElementById("titleCard").src = "";
+function goToMain() {
   location.href = "./main.html";
 }
 
-document.onkeydown = loadPage;
+function goToInstructions() {
+
+}

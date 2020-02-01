@@ -1,0 +1,16 @@
+body {
+  background-color: #b8e6ed;
+}
+
+@font-face {
+  font-family: hojasDePlata;
+  src: url(./lib/HojasDePlata.ttf);
+}
+
+h1 {
+  font-family: hojasDePlata;
+  text-align: center;
+  font-size: 65px;
+  margin-top: 20px;
+  color: #2e6e31;
+}
