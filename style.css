@@ -1,6 +1,6 @@
 body {
   background-color: #b8e6ec;
-  color: #2e6e31;
+  color: #295C48;
   margin: 0% 15% 0% 15%;
 }
 
@@ -16,12 +16,19 @@ body {
 
 h1 {
   font-family: peasAndCarrots;
-  letter-spacing: 5px;
+  letter-spacing: 9px;
   text-align: center;
   font-size: 110px;
   margin-top: 50px;
-  margin-bottom: 40px;
+  margin-bottom: 0px;
   color: #348E59;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+#score-text {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 60px;
 }
 
 #upload-text {
@@ -42,6 +49,7 @@ h1 {
   vertical-align: middle;
   margin-bottom: 5px;
   margin-left: 10px;
+  opacity: 0.7;
 }
 
 .button {
@@ -73,7 +81,7 @@ footer {
 }
 
 #info-box {
-  border-left: 2px solid black;
+  border-left: 2px solid #295C48;;
 }
 
 
@@ -81,18 +89,15 @@ footer {
 	text-align: center;
 	font-size: 25px;
 	margin-bottom: 0px;
-	color: #295C48
 }
 
 #scientific-name {
 	text-align: center;
 	font-style: italic;
-	color: #295C48
 }
 
 #read-more-div {
 	text-align: center;
-	color: #295C48
 }
 
 #read-more:hover {cursor: pointer;}
