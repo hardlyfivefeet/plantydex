@@ -74,25 +74,22 @@ footer {
 
 #info-box {
   border-left: 2px solid black;
+  text-align: center;
+  color: #295C48;
 }
 
+#info-box-thumbnail {
+  max-width: 200px;
+  max-height: 210px;
+}
 
 #common-name {
-	text-align: center;
 	font-size: 25px;
 	margin-bottom: 0px;
-	color: #295C48
 }
 
 #scientific-name {
-	text-align: center;
 	font-style: italic;
-	color: #295C48
-}
-
-#read-more-div {
-	text-align: center;
-	color: #295C48
 }
 
 #read-more:hover {cursor: pointer;}
@@ -127,4 +124,3 @@ footer {
 }
 
 input:hover {cursor: pointer;}
-

@@ -33,10 +33,6 @@ let plants;
 
 getStoredPlantydexItems();
 
-let commonName = document.getElementById("common-name");
-let scientificName = document.getElementById("scientific-name");
-let readMore = document.getElementById("read-more");
-
 let plantydexItems = document.getElementById("plantydex-items");
 
 for (const plant of plants) {
@@ -51,6 +47,8 @@ fileInput.addEventListener("change", function() {
   reader.onload = function(e) {
     let apiResponseInfo = JSON.parse(mockJson);
     let plant = new PlantydexItem(reader.result, apiResponseInfo["plant"]);
+    // storePlantydexItem(plant);
+    // addPlantydexItem(plant);
 
     if (!plants.find(o => o.info["name"] === plant.info["name"])) {
       storePlantydexItem(plant);
@@ -59,7 +57,6 @@ fileInput.addEventListener("change", function() {
       alert("Plant already collected in Plantydex!");
     }
   }
-
   reader.readAsDataURL(plantImage);
 });
 
@@ -78,9 +75,16 @@ function addPlantydexItem(plant) {
   img.src = plant.image;
   img.className = "plantydex-item";
   img.addEventListener("click", function () {
+    let thumbnailImage = document.getElementById("info-box-thumbnail");
+    let commonName = document.getElementById("common-name");
+    let scientificName = document.getElementById("scientific-name");
+    let readMore = document.getElementById("read-more");
+
+    thumbnailImage.src = plant.image;
     commonName.textContent = plant.info["common_name"];
     scientificName.textContent = plant.info["name"];
     readMore.href = plant.info["url"];
+    readMore.textContent = "Read More"
   });
   plantydexItems.appendChild(img);
   updateScore();
