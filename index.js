@@ -46,10 +46,21 @@ for (const plant of plants) {
 let fileInput = document.getElementById("fileInput");
 fileInput.addEventListener("change", function() {
   let plantImage = event.target.files[0];
-  let apiResponseInfo = JSON.parse(mockJson);
-  let plant = new PlantydexItem(plantImage, apiResponseInfo["plant"]);
-  storePlantydexItem(plant);
-  addPlantydexItem(plant);
+
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    let apiResponseInfo = JSON.parse(mockJson);
+    let plant = new PlantydexItem(reader.result, apiResponseInfo["plant"]);
+
+    if (!plants.find(o => o.info["name"] === plant.info["name"])) {
+      storePlantydexItem(plant);
+      addPlantydexItem(plant);
+    } else {
+      alert("Plant already collected in Plantydex!");
+    }
+  }
+
+  reader.readAsDataURL(plantImage);
 });
 
 function storePlantydexItem(newPlantydexItem) {
@@ -63,8 +74,8 @@ function getStoredPlantydexItems() {
 }
 
 function addPlantydexItem(plant) {
-  let img = document.createElement("IMG");
-  img.src = URL.createObjectURL(plant.image);
+  let img = new Image();
+  img.src = plant.image;
   img.className = "plantydex-item";
   img.addEventListener("click", function () {
     commonName.textContent = plant.info["common_name"];
@@ -72,4 +83,10 @@ function addPlantydexItem(plant) {
     readMore.href = plant.info["url"];
   });
   plantydexItems.appendChild(img);
+  updateScore();
+}
+
+function updateScore() {
+  let score = document.getElementById("score");
+  score.textContent = plants.length;
 }
