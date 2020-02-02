@@ -1,12 +1,36 @@
-<html>
-  <header>
-    <link rel="stylesheet" type="text/css" href="index.css" />
-  </header>
-  <body>
-    <h1>Plantydex</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Plantydex</title>
+  </head>
 
-    <a type="button" id="goToInstructions" class="button" onclick="goToInstructions()">Instructions</a>
-    <a type="button" id="goToMain" class="button" onclick="goToMain()">Click here to begin!</a>
+  <body>
+    <h1>Plan<img id="logo" src="./images/plant.png"></img>ydex</h1>
+
+    <div class="grid-container">
+        <div class="grid-item">
+          <div id="upload-photo">
+            <p id="upload-text">Upload a plant photo</p>
+            <img id="camera-button" src="./images/camera.png"></img>
+            <input type="file" id="fileInput" accept=".jpg,.jpeg,.png" />
+          </div>
+          <div id="info-box">
+            <p>Click on a plant from the Plantydex to read more about it</p>
+          </div>
+        </div>
+        <div id="plantydex-items" class="grid-item">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor risus non finibus elementum. Vestibulum quis fringilla erat. Donec vel elementum eros. Vivamus ac sollicitudin ligula, et lacinia urna. Donec hendrerit lectus facilisis metus sagittis euismod. Aenean quis orci quis neque condimentum porta. Sed nec mi suscipit, sagittis turpis ac, blandit turpis. Aliquam in odio pulvinar, placerat mi vitae, imperdiet nisl. Nam ullamcorper augue in quam dictum varius.Mauris nec ex tincidunt ipsum eleifend rutrum. Sed et nibh ipsum. In ornare massa ligula, quis sagittis justo consectetur a. Nam mattis augue ut dui volutpat pretium. Fusce consequat odio a placerat placerat. Nunc aliquet, nibh vitae porta imperdiet, leo tortor efficitur neque, quis efficitur felis tellus sed lectus. Duis euismod justo eget augue molestie faucibus. Sed blandit enim vel turpis volutpat iaculis in non odio. Mauris commodo velit facilisis, luctus urna nec, volutpat eros. Pellentesque purus arcu, pharetra sit amet suscipit sit amet, mattis vitae felis. Curabitur quis rhoncus diam, sit amet ornare mauris. Aliquam tempus, risus vel laoreet posuere, massa lorem scelerisque nisl, dignissim rutrum justo mi et lectus.
+Pellentesque fringilla viverra erat, tristique tincidunt dolor consectetur quis. Sed vel elementum velit. Donec in tincidunt leo. Morbi dictum, metus ac scelerisque lacinia, nisi augue suscipit ipsum, at ultricies nunc sapien a ante. Duis eget nisl purus. Curabitur et iaculis mi. Vivamus laoreet faucibus eros non sodales. Donec nec tortor nisl. Vivamus velit massa, fringilla vitae leo eget, placerat varius justo. Aenean id est ac arcu pulvinar semper id vel eros. Aliquam eu velit varius, sollicitudin metus interdum, rhoncus mauris. Donec tincidunt nisl non neque finibus, ut imperdiet orci maximus. Quisque laoreet dolor a consequat rutrum. Sed sollicitudin mi ut laoreet fringilla. Nullam ultricies dolor vitae congue interdum. Donec eget convallis felis, non posuere nisl.</p>
+        </div>
+    </div>
+
+    <footer>
+      <small>&copy; 2020 Kaitlyn Behrens, Evan Mitchell &amp; Merissa Tan</small>
+    </footer>
     <script src="./index.js"></script>
   </body>
+
 </html>

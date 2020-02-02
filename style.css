@@ -1,0 +1,92 @@
+body {
+  background-color: #b8e6ec;
+  color: #2e6e31;
+}
+
+@font-face {
+  font-family: hojasDePlata;
+  src: url(./lib/HojasDePlata.ttf);
+}
+
+@font-face {
+  font-family: peasAndCarrots;
+  src: url(./lib/peas_carrots.ttf);
+}
+
+h1 {
+  font-family: peasAndCarrots;
+  letter-spacing: 5px;
+  text-align: center;
+  font-size: 75px;
+  margin-top: 20px;
+  color: #2e6e31;
+}
+
+#upload-text, #info-box {
+  font-size: 25px;
+}
+
+#logo {
+  max-width: 60px;
+  vertical-align: sub;
+  margin-bottom: 9px;
+  margin-left: -8px;
+  margin-right: -5px;
+}
+
+#camera-button {
+  max-width: 150px;
+}
+
+.button {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+footer {
+  position: fixed;
+  bottom: 5px;
+  margin-left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-item {
+  text-align: center;
+}
+
+#plantydex-items {
+  border-left: 2px solid #4869ab;
+  overflow-y: auto;
+  max-height: 70vh;
+}
+
+#info-box {
+
+}
+
+#upload-photo {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  text-align: center;
+}
+
+#upload-photo input[type=file] {
+  font-size: 150px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
