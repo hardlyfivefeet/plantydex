@@ -1,12 +1,7 @@
 body {
   background-color: #b8e6ec;
-  color: #2e6e31;
+  color: #295C48;
   margin: 0% 15% 0% 15%;
-}
-
-@font-face {
-  font-family: hojasDePlata;
-  src: url(./lib/HojasDePlata.ttf);
 }
 
 @font-face {
@@ -16,17 +11,26 @@ body {
 
 h1 {
   font-family: peasAndCarrots;
-  letter-spacing: 5px;
+  letter-spacing: 9px;
   text-align: center;
   font-size: 110px;
-  margin-top: 50px;
-  margin-bottom: 40px;
+  margin-top: 40px;
+  margin-bottom: 0px;
   color: #348E59;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+#score-text {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 40px;
 }
 
 #upload-text {
   font-size: 25px;
   color: #50615B;
+  margin-top: 8px;
+  margin-bottom: 5px;
 }
 
 #logo {
@@ -42,6 +46,7 @@ h1 {
   vertical-align: middle;
   margin-bottom: 5px;
   margin-left: 10px;
+  opacity: 0.7;
 }
 
 .button {
@@ -73,7 +78,7 @@ footer {
 }
 
 #info-box {
-  border-left: 2px solid black;
+  border-left: 2px solid #295C48;
   text-align: center;
   color: #295C48;
 }
@@ -96,7 +101,7 @@ footer {
 
 #plantydex-items {
   overflow-y: auto;
-  height: 30vh;
+  max-height: 40vh;
   display: grid;
   gap: 20px;
   margin-top: 30px;
@@ -104,7 +109,8 @@ footer {
 }
 
 .plantydex-item {
-  max-width: 85px;
+  max-width: 100px;
+  margin: auto;
 }
 
 #upload-photo {
@@ -113,6 +119,8 @@ footer {
   text-align: center;
   background-color: #B2C5BE;
   border-radius: 15px;
+  margin-left: 60px;
+  margin-right: 60px;
 }
 
 #upload-photo input[type=file] {
