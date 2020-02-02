@@ -26,6 +26,7 @@ h1 {
 
 #upload-text {
   font-size: 25px;
+  color: #50615B;
 }
 
 #logo {
@@ -75,9 +76,26 @@ footer {
   border-left: 2px solid black;
 }
 
-#info {
-	margin-left: 20px;
+
+#common-name {
+	text-align: center;
+	font-size: 25px;
+	margin-bottom: 0px;
+	color: #295C48
 }
+
+#scientific-name {
+	text-align: center;
+	font-style: italic;
+	color: #295C48
+}
+
+#read-more-div {
+	text-align: center;
+	color: #295C48
+}
+
+#read-more:hover {cursor: pointer;}
 
 #plantydex-items {
   overflow-y: auto;
