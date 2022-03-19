@@ -1,5 +1,5 @@
-# plantdex
-LMUHacks 2020 Project  
-Member: Kaitlyn Behrens, Evan Mitchell, Merissa Tan  
+# Plantydex
+**Kaitlyn Behrens, Evan Mitchell, and Merissa Tan**  
+LMUHacks 2020  
 
-Pokedex but for plants!
+Pokédex but for plants!
