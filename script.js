@@ -27,70 +27,58 @@ const mockJson = `
 }
 `;
 
-// window.localStorage.removeItem("plantydexItems");
 
-let plants;
-
-getStoredPlantydexItems();
-
-let plantydexItems = document.getElementById("plantydex-items");
-
-for (const plant of plants) {
-  addPlantydexItem(plant);
+class Plant {
+  constructor(image, info) {
+    this.image = image;
+    this.info = info;
+  }
 }
 
+
 let fileInput = document.getElementById("fileInput");
-fileInput.addEventListener("change", function() {
+let thumbnailImage = document.getElementById("thumbnail");
+let commonName = document.getElementById("commonName");
+let scientificName = document.getElementById("scientificName");
+let readMore = document.getElementById("readMore");
+let plantydexItems = document.getElementById("plantydexItems");
+let score = document.getElementById("score");
+
+// window.localStorage.removeItem("plants");
+
+let plants = JSON.parse(localStorage.getItem("plants")) || [];
+for (let plant of plants) {
+  addToPlantydex(plant);
+}
+
+fileInput.addEventListener("change", function (event) {
   let plantImage = event.target.files[0];
-
-  var reader = new FileReader();
-  reader.onload = function(e) {
+  let reader = new FileReader();
+  reader.onload = function () {
     let apiResponseInfo = JSON.parse(mockJson);
-    let plant = new PlantydexItem(reader.result, apiResponseInfo["plant"]);
-    // storePlantydexItem(plant);
-    // addPlantydexItem(plant);
-
+    let plant = new Plant(reader.result, apiResponseInfo["plant"]);
     if (!plants.find(o => o.info["name"] === plant.info["name"])) {
-      storePlantydexItem(plant);
-      addPlantydexItem(plant);
+      plants.push(plant);
+      localStorage.setItem("plants", JSON.stringify(plants));
+      addToPlantydex(plant);
     } else {
       alert("Plant already collected in Plantydex!");
     }
-  }
+  };
   reader.readAsDataURL(plantImage);
 });
 
-function storePlantydexItem(newPlantydexItem) {
-  plants.push(newPlantydexItem);
-  localStorage.setItem("plantydexItems", JSON.stringify(plants));
-  getStoredPlantydexItems();
-}
-
-function getStoredPlantydexItems() {
-  plants = JSON.parse(localStorage.getItem("plantydexItems")) || [];
-}
-
-function addPlantydexItem(plant) {
+function addToPlantydex(plant) {
   let img = new Image();
   img.src = plant.image;
-  img.className = "plantydex-item";
+  img.className = "plantydexItem";
   img.addEventListener("click", function () {
-    let thumbnailImage = document.getElementById("info-box-thumbnail");
-    let commonName = document.getElementById("common-name");
-    let scientificName = document.getElementById("scientific-name");
-    let readMore = document.getElementById("read-more");
-
     thumbnailImage.src = plant.image;
     commonName.textContent = plant.info["common_name"];
     scientificName.textContent = plant.info["name"];
     readMore.href = plant.info["url"];
-    readMore.textContent = "Read More"
+    readMore.textContent = "Read More";
   });
   plantydexItems.appendChild(img);
-  updateScore();
-}
-
-function updateScore() {
-  let score = document.getElementById("score");
   score.textContent = plants.length;
 }

@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, user-scalable=no" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width" />
     <title>Plantydex</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
 
   <body>
-    <h1>Plan<img id="logo" src="./images/plant.png"></img>ydex</h1>
-    <p id="score-text">Current Plantydex Score: <span id="score">0</span></p>
+    <h1>Plan<img id="logo" src="images/plant.png"></img>ydex</h1>
+    <p id="scoreText">Current Plantydex Score: <span id="score">0</span></p>
 
-    <div class="grid-container">
+    <div class="gridContainer">
       <div>
-        <div id="upload-photo">
-          <p id="upload-text">Upload a plant photo:<img id="camera-button" src="./images/camera.png"></img></p>
+        <div id="uploadPhoto">
+          <p id="uploadText">Upload a plant photo:<img id="cameraButton" src="images/camera.png"></img></p>
           <input type="file" id="fileInput" accept=".jpg,.jpeg,.png" />
         </div>
-        <div id="plantydex-items">
+        <div id="plantydexItems">
         </div>
       </div>
-      <div id="info-box">
-        <img id="info-box-thumbnail" src="./images/plant.png"></img>
-        <p id="common-name">Choose a plant from your Plantydex to read more!</p>
-        <p id="scientific-name"></p>
-        <a target="_blank" id="read-more"></a>
+      <div id="infoBox">
+        <img id="thumbnail" src="images/plant.png"></img>
+        <p id="commonName">Choose a plant from your Plantydex to read more!</p>
+        <p id="scientificName"></p>
+        <a target="_blank" id="readMore"></a>
       </div>
     </div>
 
     <footer>
-      <small>&copy; 2020 Kaitlyn Behrens, Evan Mitchell &amp; Merissa Tan</small>
+      <small>© 2020–2022 Kaitlyn Behrens, Evan Mitchell, & Merissa Tan</small>
     </footer>
-    <script src="./plantydexItem.js"></script>
-    <script src="./index.js"></script>
   </body>
 
 </html>

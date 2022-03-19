@@ -1,134 +1,162 @@
 body {
-  background-color: #b8e6ec;
+  margin: 0 15% 0 15%;
+
   color: #295C48;
-  margin: 0% 15% 0% 15%;
+  background-color: #B8E6EC;
 }
 
 @font-face {
   font-family: peasAndCarrots;
-  src: url(./lib/peas_carrots.ttf);
+
+  src: url(fonts/peas_carrots.ttf);
 }
 
 h1 {
   font-family: peasAndCarrots;
-  letter-spacing: 9px;
-  text-align: center;
   font-size: 110px;
+
   margin-top: 40px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
+
+  text-align: center;
+  letter-spacing: 9px;
+
   color: #348E59;
   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
-#score-text {
-  text-align: center;
-  margin-top: 0px;
+#scoreText {
+  margin-top: 0;
   margin-bottom: 40px;
+
+  text-align: center;
 }
 
-#upload-text {
+#uploadText {
   font-size: 25px;
-  color: #50615B;
+
   margin-top: 8px;
   margin-bottom: 5px;
+
+  color: #50615B;
 }
 
 #logo {
   max-width: 90px;
-  vertical-align: sub;
+  margin-right: -5px;
   margin-bottom: 9px;
   margin-left: -8px;
-  margin-right: -5px;
+
+  vertical-align: sub;
 }
 
-#camera-button {
+#cameraButton {
   max-width: 50px;
-  vertical-align: middle;
   margin-bottom: 5px;
   margin-left: 10px;
+
+  vertical-align: middle;
+
   opacity: 0.7;
 }
 
 .button {
-  background-color: #008CBA;
-  border: none;
-  color: white;
+  font-size: 16px;
+
+  display: inline-block;
+
   padding: 15px 32px;
+
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+
+  color: white;
+  border: none;
+  background-color: #008CBA;
 }
 
 footer {
   position: fixed;
   bottom: 5px;
+
   margin-left: 35%;
+
   transform: translate(-50%, 0);
 }
 
-.grid-container {
+.gridContainer {
   display: grid;
+
   gap: 10px;
   grid-template-columns: 2fr 1fr;
 }
 
-.grid-item {
+#infoBox {
   text-align: center;
-}
 
-#info-box {
-  border-left: 2px solid #295C48;
-  text-align: center;
   color: #295C48;
+  border-left: 2px solid #295C48;
 }
 
-#info-box-thumbnail {
+#thumbnail {
   max-width: 200px;
   max-height: 210px;
 }
 
-#common-name {
-	font-size: 25px;
-	margin-bottom: 0px;
+#commonName {
+  font-size: 25px;
+
+  margin-bottom: 0;
 }
 
-#scientific-name {
-	font-style: italic;
+#scientificName {
+  font-style: italic;
 }
 
-#read-more:hover {cursor: pointer;}
+#readMore:hover {
+  cursor: pointer;
+}
 
-#plantydex-items {
-  overflow-y: auto;
-  max-height: 40vh;
+#plantydexItems {
   display: grid;
-  gap: 20px;
+  overflow-y: auto;
+
+  max-height: 40vh;
   margin-top: 30px;
+
+  gap: 20px;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.plantydex-item {
+.plantydexItem {
   max-width: 100px;
   margin: auto;
 }
 
-#upload-photo {
+#uploadPhoto {
   position: relative;
+
   overflow: hidden;
-  text-align: center;
-  background-color: #B2C5BE;
-  border-radius: 15px;
-  margin-left: 60px;
+
   margin-right: 60px;
+  margin-left: 60px;
+
+  text-align: center;
+
+  border-radius: 15px;
+  background-color: #B2C5BE;
 }
 
-#upload-photo input[type=file] {
+#uploadPhoto input[type=file] {
   font-size: 100px;
+
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
+
   opacity: 0;
 }
 
-input:hover {cursor: pointer;}
+input:hover {
+  cursor: pointer;
+}
